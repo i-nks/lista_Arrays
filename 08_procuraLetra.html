@@ -6,10 +6,17 @@
     //Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
 
     //ENTRADA
-
+    let palavras = [];
+    palavras.push(prompt(`Informe uma palavra.`).trim().toLowerCase());
+    let letra = prompt(`Informe o caractere que deseja verificar.`).trim().toLowerCase();
 
     //PROCESSAMENTO
-
+    if (palavras[0].indexOf(letra) > -1 ) {
+        document.write(`O caracter informado na palavra existe e sua primeira posição na palavra é ${palavras[0].indexOf(letra)+1}.`)
+    }
+    else {
+        document.write(`O caracter ${letra} informado não existe na palavra ${palavras}.`)
+    }
 
     //SAÍDA
 

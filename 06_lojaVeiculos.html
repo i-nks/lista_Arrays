@@ -4,17 +4,39 @@
     // let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
     // let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
     // let carrosHatch = ["308", "Focus", "i30"];
-    
+
     //Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
 
     //Apresente a lista final de cada tipo de veículo.
 
-    //ENTRADA
-
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    let tipo, carro;
 
     //PROCESSAMENTO
-
+    for (carros = 0; carros < 3; carros++) {
+        tipo = prompt(`Informe o tipo do veículo que você deseja adcionar a lista. (SD-Sedan/H-Hatch/S-SUV).`).trim().toLowerCase();
+        carro = prompt(`Informe o veículo que deseja adicionar.`).trim();
+        if (tipo == "s" || tipo == "sd" || tipo == "h") {
+            if (tipo == "s") {
+                carrosSUV.push(carro);
+            }
+            else if (tipo == "sd") {
+                cassosSedan.push(carro);
+            }
+            else {
+                carrosHatch.push(carro);
+            }
+        }
+        else {
+            alert(`Tipo inválido! Encerrando programa.`)
+            throw new Error();
+            stop();
+        }
+    }
 
     //SAÍDA
+    document.write(`A lista final de SUVs é : <br> ${carrosSUV.join(`; <br>`)}. <br> A lista final de carros Sedan é: <br> ${cassosSedan.join(`; <br>`)}. <br> A lista final de carros Hatch é: <br> ${carrosHatch.join(`;<br>`)}.`)
 
 </script>

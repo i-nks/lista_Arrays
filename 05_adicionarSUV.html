@@ -7,9 +7,16 @@
 
     //ENTRADA
 
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let lista1 = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+
+    const lista2 = prompt(`A sua lista é [Tiggo, Sportage, Tucson, EcoSport]. Qual carro você deseja adicionar?`);
+
+    carrosSUV.push(lista2)
 
     //PROCESSAMENTO
 
+    document.write(`A sua lista antiga era [${lista1.join(' - ')}] e a sua nova lista é [${carrosSUV.join(' - ')}].`);
 
     //SAÍDA
 
